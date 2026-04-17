@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — Amara Okonkwo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+ 
+  <!-- NAV -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">KA</div>
+      <div class="logo-text">Kolawole <span>Abdullahi</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="about.html" class="active"><i class="fa-solid fa-user"></i> About</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      <li><a href="contact.html" class="nav-btn"><i class="fa-solid fa-id-card"></i> Hire Me</a></li>
+    </ul>
+    <button class="burger" id="burger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+ 
+  <!-- Mobile Menu -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="about.html" class="active"><i class="fa-solid fa-user"></i> About</a>
+    <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+    <div class="mobile-divider"></div>
+    <a href="contact.html" class="mobile-btn"><i class="fa-solid fa-id-card"></i> Hire Me</a>
+  </div>
+ 
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <p class="section-tag"><i class="fa-solid fa-user-graduate"></i> About Me</p>
+      <h1 class="page-hero-title">Student. Developer.<br><em>Problem Solver.</em></h1>
+      <p class="page-hero-sub">A second-year health information management science student with a love for clean code, bold design, and building tools that actually matter to people.</p>
+    </div>
+  </section>
+ 
+  <!-- PROFILE SECTION -->
+  <section class="profile-section">
+    <div class="container profile-grid">
+ 
+      <!-- Left: Identity Card -->
+      <div class="profile-left">
+        <div class="profile-card">
+          <div class="profile-avatar-wrap">
+            <div class="profile-avatar">KA</div>
+            <div class="status-dot"><i class="fa-solid fa-circle-check"></i> Active</div>
+          </div>
+          <h2 class="profile-name">Kolawole Abdullahi</h2>
+          <p class="profile-role"><i class="fa-solid fa-laptop-code"></i> Health Information Management Student</p>
+ 
+          <div class="profile-details">
+            <div class="detail-row">
+              <span class="detail-label"><i class="fa-solid fa-id-badge"></i> Student ID</span>
+              <span class="detail-val">25/1365</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label"><i class="fa-solid fa-building-columns"></i> Faculty</span>
+              <span class="detail-val">Basic Medical Sciences</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label"><i class="fa-solid fa-book"></i> Department</span>
+              <span class="detail-val">HIM</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label"><i class="fa-solid fa-layer-group"></i> Level</span>
+              <span class="detail-val">200</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label"><i class="fa-solid fa-calendar"></i> Session</span>
+              <span class="detail-val">2025 / 2026</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label"><i class="fa-solid fa-location-dot"></i> State of Origin</span>
+              <span class="detail-val">Kwara, Nigeria</span>
+            </div>
+            <div class="detail-row">
+              <span class="detail-label"><i class="fa-solid fa-star"></i> CGPA</span>
+              <span class="detail-val cgpa">4.67 / 5.0</span>
+            </div>
+          </div>
+ 
+          <div class="profile-socials">
+            <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" title="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="mailto:amara@email.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Right: Bio & Details -->
+      <div class="profile-right">
+ 
+        <div class="bio-block">
+          <h3><i class="fa-solid fa-feather-pointed"></i> My Story</h3>
+          <p>I'm Amara, a 300-level Health Information Management student at Federal University Portal. I grew up in Enugu, Nigeria, with a deep curiosity about how healthcare systems work and how information shapes patient outcomes. What started as an interest in health sciences evolved into a passion for managing, protecting, and leveraging medical data to improve lives.</p>
+<p>I specialize in health records management and clinical data systems, with a growing interest in health informatics and data analytics. I believe well-managed health information is like a well-told story — it should be accurate, accessible, and meaningful to those who need it most.</p>
+        </div>
+ 
+        <!-- Skills with progress -->
+        <div class="skills-block">
+          <h3><i class="fa-solid fa-chart-bar"></i> Technical Skills</h3>
+          <div class="skill-bar-list">
+            <div class="skill-bar-item">
+              <div class="skill-bar-top">
+                <span><i class="fa-brands fa-html5"></i> HTML / CSS</span>
+                <span>92%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill" style="width:92%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top">
+                <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                <span>85%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top">
+                <span><i class="fa-brands fa-python"></i> Python</span>
+                <span>78%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill" style="width:78%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top">
+                <span><i class="fa-brands fa-react"></i> React</span>
+                <span>72%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill" style="width:72%"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-top">
+                <span><i class="fa-solid fa-database"></i> SQL / Databases</span>
+                <span>68%</span>
+              </div>
+              <div class="bar-track"><div class="bar-fill" style="width:68%"></div></div>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Education -->
+        <div class="edu-block">
+          <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+          <div class="timeline">
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-body">
+                <span class="tl-year"><i class="fa-regular fa-clock"></i> 2025  Present</span>
+                <h4>B.Sc. Health Information Management</h4>
+                <p>Adeleke University Portal &nbsp;·&nbsp; CGPA: 4.67 / 5.0</p>
+              </div>
+            </div>
+            <div class="tl-item">
+              <div class="tl-dot"></div>
+              <div class="tl-body">
+                <span class="tl-year"><i class="fa-regular fa-clock"></i> 2014 – 2020</span>
+                <h4>WAEC / SSCE</h4>
+                <p>Government Secondary School, Lagos &nbsp;·&nbsp; 8 A's</p>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Achievements -->
+        <div class="achieve-block">
+          <h3><i class="fa-solid fa-trophy"></i> Awards & Achievements</h3>
+          <div class="achieve-grid">
+            <div class="achieve-item">
+              <i class="fa-solid fa-medal"></i>
+              <div>
+                <h4>Best Final Year Project 2023</h4>
+                <p>Faculty of Sciences Award</p>
+              </div>
+            </div>
+            <div class="achieve-item">
+              <i class="fa-solid fa-award"></i>
+              <div>
+                <h4>Dean's List  3 Consecutive Semesters</h4>
+                <p>Academic Excellence Recognition</p>
+              </div>
+            </div>
+            <div class="achieve-item">
+              <i class="fa-solid fa-code-branch"></i>
+              <div>
+                <h4>1st Place — University Hackathon</h4>
+                <p>Built an offline student management tool</p>
+              </div>
+            </div>
+            <div class="achieve-item">
+              <i class="fa-solid fa-certificate"></i>
+              <div>
+                <h4>Google Africa Scholarship 2024</h4>
+                <p>Mobile Web Specialist Track</p>
+              </div>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- INTERESTS -->
+  <section class="interests-section">
+    <div class="container">
+      <h3><i class="fa-solid fa-heart"></i> Interests & Hobbies</h3>
+      <div class="interests-grid">
+        <div class="interest-chip"><i class="fa-solid fa-microchip"></i> Open Source</div>
+        <div class="interest-chip"><i class="fa-solid fa-brain"></i> Machine Learning</div>
+        <div class="interest-chip"><i class="fa-solid fa-palette"></i> UI/UX Design</div>
+        <div class="interest-chip"><i class="fa-solid fa-book-open"></i> Technical Writing</div>
+        <div class="interest-chip"><i class="fa-solid fa-chess"></i> Chess</div>
+        <div class="interest-chip"><i class="fa-solid fa-camera"></i> Photography</div>
+        <div class="interest-chip"><i class="fa-solid fa-music"></i> Afrobeats</div>
+        <div class="interest-chip"><i class="fa-solid fa-globe"></i> Travel</div>
+      </div>
+    </div>
+  </section>
+ 
+  <footer class="footer">
+    <p><i class="fa-solid fa-code"></i> Built by <strong>Amara Okonkwo</strong> &nbsp;·&nbsp; <i class="fa-regular fa-copyright"></i> 2026</p>
+  </footer>
+ 
+  <script src="nav.js"></script>
+</body>
+</html>

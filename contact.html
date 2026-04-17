@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Amara Okonkwo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+ 
+  <!-- NAV -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">KA</div>
+      <div class="logo-text">Kolawole <span>Abdullahi</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
+      <li><a href="contact.html" class="active"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      <li><a href="contact.html" class="nav-btn active-btn"><i class="fa-solid fa-id-card"></i> Hire Me</a></li>
+    </ul>
+    <button class="burger" id="burger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+ 
+  <!-- Mobile Menu -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="about.html"><i class="fa-solid fa-user"></i> About</a>
+    <a href="contact.html" class="active"><i class="fa-solid fa-envelope"></i> Contact</a>
+    <div class="mobile-divider"></div>
+    <a href="contact.html" class="mobile-btn"><i class="fa-solid fa-id-card"></i> Hire Me</a>
+  </div>
+ 
+  <!-- PAGE HERO -->
+  <section class="page-hero contact-hero">
+    <div class="container">
+      <p class="section-tag"><i class="fa-solid fa-paper-plane"></i> Get In Touch</p>
+      <h1 class="page-hero-title">Let's Build Something<br><em>Together.</em></h1>
+      <p class="page-hero-sub">Open to internships, freelance work, and collaborative projects. I usually respond within 24 hours.</p>
+    </div>
+  </section>
+ 
+  <!-- CONTACT BODY -->
+  <section class="contact-body">
+    <div class="container contact-grid">
+ 
+      <!-- Left: Info Panels -->
+      <div class="contact-left">
+ 
+        <div class="info-card">
+          <h3><i class="fa-solid fa-address-book"></i> Contact Info</h3>
+ 
+          <div class="info-row">
+            <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <p class="info-label">Email</p>
+              <p class="info-val">smithdon578@gmail.com</p>
+            </div>
+          </div>
+ 
+          <div class="info-row">
+            <div class="info-icon"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <p class="info-label">Phone</p>
+              <p class="info-val">+234 801 234 5678</p>
+            </div>
+          </div>
+ 
+          <div class="info-row">
+            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <p class="info-label">Location</p>
+              <p class="info-val">Kwara, Nigeria</p>
+            </div>
+          </div>
+ 
+          <div class="info-row">
+            <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <p class="info-label">Response Time</p>
+              <p class="info-val">Within 24 hours</p>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="info-card socials-card">
+          <h3><i class="fa-solid fa-share-nodes"></i> Social Links</h3>
+          <div class="social-link-list">
+            <a href="#" class="social-link-row">
+              <div class="social-icon github"><i class="fa-brands fa-github"></i></div>
+              <div>
+                <p class="info-label">GitHub</p>
+                <p class="info-val">github.com/amara-dev</p>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square arrow-ext"></i>
+            </a>
+            <a href="#" class="social-link-row">
+              <div class="social-icon linkedin"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div>
+                <p class="info-label">LinkedIn</p>
+                <p class="info-val">linkedin.com/in/amara-okonkwo</p>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square arrow-ext"></i>
+            </a>
+            <a href="#" class="social-link-row">
+              <div class="social-icon twitter"><i class="fa-brands fa-x-twitter"></i></div>
+              <div>
+                <p class="info-label">Twitter / X</p>
+                <p class="info-val">@amara_builds</p>
+              </div>
+              <i class="fa-solid fa-arrow-up-right-from-square arrow-ext"></i>
+            </a>
+          </div>
+        </div>
+ 
+        <div class="info-card availability-card">
+          <div class="avail-dot"></div>
+          <h4><i class="fa-solid fa-circle-check"></i> Currently Available</h4>
+          <p>Open to internship roles, part-time remote work, and open source collaborations starting <strong>July 2025</strong>.</p>
+        </div>
+ 
+      </div>
+ 
+      <!-- Right: Form -->
+      <div class="contact-right">
+        <div class="form-card">
+          <h3><i class="fa-solid fa-pen-nib"></i> Send a Message</h3>
+          <p class="form-subtext">Fill in the form and I'll get back to you as soon as possible.</p>
+ 
+          <div id="formInner">
+            <div class="form-row-2">
+              <div class="field-group">
+                <label><i class="fa-solid fa-user"></i> First Name</label>
+                <input type="text" placeholder="e.g. Chidi" />
+              </div>
+              <div class="field-group">
+                <label><i class="fa-solid fa-user"></i> Last Name</label>
+                <input type="text" placeholder="e.g. Nwachukwu" />
+              </div>
+            </div>
+ 
+            <div class="field-group">
+              <label><i class="fa-solid fa-envelope"></i> Email Address</label>
+              <input type="email" placeholder="your@email.com" />
+            </div>
+ 
+            <div class="field-group">
+              <label><i class="fa-solid fa-briefcase"></i> Subject / Opportunity</label>
+              <select>
+                <option value="">Select a topic...</option>
+                <option>Internship Offer</option>
+                <option>Freelance Project</option>
+                <option>Collaboration</option>
+                <option>Mentorship</option>
+                <option>General Enquiry</option>
+              </select>
+            </div>
+ 
+            <div class="field-group">
+              <label><i class="fa-solid fa-building"></i> Company / Institution (optional)</label>
+              <input type="text" placeholder="e.g. Flutterwave, University of Lagos" />
+            </div>
+ 
+            <div class="field-group">
+              <label><i class="fa-solid fa-message"></i> Message</label>
+              <textarea placeholder="Tell me about the project, role, or idea you have in mind..."></textarea>
+            </div>
+ 
+            <button class="form-submit" onclick="submitForm()">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </div>
+ 
+          <!-- Success State -->
+          <div class="form-success" id="successMsg">
+            <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h4>Message Sent!</h4>
+            <p>Thanks for reaching out, I'll reply within 24 hours.</p>
+            <button class="btn-ghost" style="margin-top:20px" onclick="resetForm()">
+              <i class="fa-solid fa-rotate-left"></i> Send Another
+            </button>
+          </div>
+        </div>
+      </div>
+ 
+    </div>
+  </section>
+ 
+  <!-- Download CV Banner -->
+  <section class="cv-banner">
+    <div class="container cta-inner">
+      <div>
+        <h2><i class="fa-solid fa-file-lines"></i> Want My Full CV?</h2>
+        <p>Download my resume to see my full academic and project history.</p>
+      </div>
+      <a href="#" class="btn-primary"><i class="fa-solid fa-download"></i> Download CV</a>
+    </div>
+  </section>
+ 
+  <footer class="footer">
+    <p><i class="fa-solid fa-code"></i> Built by <strong>Kolawole Abdullahi</strong> &nbsp;·&nbsp; <i class="fa-regular fa-copyright"></i> 2026</p>
+  </footer>
+ 
+  <script src="nav.js"></script>
+  <script>
+    function submitForm() {
+      document.getElementById('formInner').style.display = 'none';
+      document.getElementById('successMsg').style.display = 'flex';
+    }
+    function resetForm() {
+      document.getElementById('formInner').style.display = 'block';
+      document.getElementById('successMsg').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

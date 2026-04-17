@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amara Okonkwo — Student Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+ 
+  <!-- NAV -->
+  <nav class="navbar">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">KA</div>
+      <div class="logo-text">Kolawole  <span>Abdullahi</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
+      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      <li><a href="contact.html" class="nav-btn"><i class="fa-solid fa-id-card"></i> Hire Me</a></li>
+    </ul>
+    <button class="burger" id="burger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+ 
+  <!-- Mobile Menu -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="about.html"><i class="fa-solid fa-user"></i> About</a>
+    <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
+    <div class="mobile-divider"></div>
+    <a href="contact.html" class="mobile-btn"><i class="fa-solid fa-id-card"></i> Hire Me</a>
+  </div>
+ 
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-tag"><i class="fa-solid fa-graduation-cap"></i> HIM · Level 200</p>
+        <h1>Hello, I'm <br><em>Kolawole Abdullahi</em></h1>
+        <p class="hero-sub">A dedicated health information management student passionate about bridging healthcare and technology to improve how medical data is organized, accessed, and protected. Currently open to internships and collaborative projects.</p>
+        <div class="hero-actions">
+          <a href="about.html" class="btn-primary"><i class="fa-solid fa-user-circle"></i> View My Profile</a>
+          <a href="contact.html" class="btn-ghost"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
+        </div>
+        <div class="hero-socials">
+          <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-frame">
+          <!-- 
+            ===== YOUR PROFILE PHOTO =====
+            Replace "your-photo.jpg" with your actual image filename.
+            Keep the image in the same folder as index.html.
+            Recommended size: 400x500px or larger, portrait orientation.
+          -->
+          <img
+            src="./image.png"
+            alt="Amara Okonkwo"
+            class="hero-photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+          />
+          <!-- Placeholder shown when no photo is uploaded yet -->
+          <div class="hero-photo-placeholder">
+            <i class="fa-solid fa-camera"></i>
+            <span>Add your photo here</span>
+            <small>Replace <code>your-photo.jpg</code></small>
+          </div>
+          <div class="photo-badge">
+            <i class="fa-solid fa-circle-check"></i> Active Student
+          </div>
+        </div>
+ 
+        <!-- Student ID mini card below photo -->
+        <div class="hero-id-mini">
+          <div class="id-mini-left">
+            <span class="id-mini-label"><i class="fa-solid fa-id-badge"></i> Student ID</span>
+            <strong>25/1365</strong>
+          </div>
+          <div class="id-mini-right">
+            <span class="id-mini-label"><i class="fa-solid fa-building-columns"></i> Faculty</span>
+            <strong>Sciences</strong>
+          </div>
+          <div class="id-mini-right">
+            <span class="id-mini-label"><i class="fa-solid fa-layer-group"></i> Level</span>
+            <strong>200</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- SKILLS SNAPSHOT -->
+  <section class="skills-section">
+    <div class="container">
+      <p class="section-tag"><i class="fa-solid fa-code"></i> Skills & Tools</p>
+      <h2 class="section-title">What I Work With</h2>
+      <div class="skills-grid">
+        <div class="skill-chip"><i class="fa-brands fa-html5"></i> HTML5</div>
+        <div class="skill-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
+        <div class="skill-chip"><i class="fa-brands fa-js"></i> JavaScript</div>
+        <div class="skill-chip"><i class="fa-brands fa-python"></i> Python</div>
+        <div class="skill-chip"><i class="fa-brands fa-react"></i> React</div>
+        <div class="skill-chip"><i class="fa-brands fa-node-js"></i> Node.js</div>
+        <div class="skill-chip"><i class="fa-solid fa-database"></i> MySQL</div>
+        <div class="skill-chip"><i class="fa-brands fa-git-alt"></i> Git</div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- PROJECTS -->
+  <section class="projects-section">
+    <div class="container">
+      <p class="section-tag"><i class="fa-solid fa-folder-open"></i> Portfolio</p>
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+ 
+        <div class="project-card">
+          <!-- 
+            PROJECT SCREENSHOT: Replace "project1.jpg" with your screenshot.
+            Recommended size: 600x360px (16:9 ratio)
+          -->
+          <div class="project-thumb">
+            <img src="project1.jpg" alt="Campus Marketplace screenshot"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="project-thumb-placeholder">
+              <i class="fa-solid fa-image"></i>
+              <span>project1.jpg</span>
+            </div>
+            <div class="project-thumb-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+          </div>
+          <div class="project-body">
+            <h3>Campus Marketplace</h3>
+            <p>A peer-to-peer marketplace for students to buy and sell goods within the campus community.</p>
+            <div class="project-tags">
+              <span>React</span><span>Node.js</span><span>MongoDB</span>
+            </div>
+            <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+          </div>
+        </div>
+ 
+        <div class="project-card">
+          <!-- Replace "project2.jpg" with your screenshot -->
+          <div class="project-thumb">
+            <img src="project2.jpg" alt="Smart Timetable screenshot"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="project-thumb-placeholder">
+              <i class="fa-solid fa-image"></i>
+              <span>project2.jpg</span>
+            </div>
+            <div class="project-thumb-icon"><i class="fa-solid fa-calendar-check"></i></div>
+          </div>
+          <div class="project-body">
+            <h3>Smart Timetable</h3>
+            <p>An automated timetable generator for university departments — reduces scheduling conflicts by 90%.</p>
+            <div class="project-tags">
+              <span>Python</span><span>Django</span><span>PostgreSQL</span>
+            </div>
+            <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+          </div>
+        </div>
+ 
+        <div class="project-card">
+          <!-- Replace "project3.jpg" with your screenshot -->
+          <div class="project-thumb">
+            <img src="project3.jpg" alt="StudySync screenshot"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+            <div class="project-thumb-placeholder">
+              <i class="fa-solid fa-image"></i>
+              <span>project3.jpg</span>
+            </div>
+            <div class="project-thumb-icon"><i class="fa-solid fa-book-open"></i></div>
+          </div>
+          <div class="project-body">
+            <h3>StudySync</h3>
+            <p>A collaborative study platform with real-time notes, flashcards, and group study rooms.</p>
+            <div class="project-tags">
+              <span>JavaScript</span><span>Firebase</span><span>CSS</span>
+            </div>
+            <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container cta-inner">
+      <div>
+        <h2><i class="fa-solid fa-handshake"></i> Open to Opportunities</h2>
+        <p>Internships, freelance projects, or collaborative builds — let's create something great.</p>
+      </div>
+      <a href="contact.html" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Let's Talk</a>
+    </div>
+  </section>
+ 
+  <footer class="footer">
+    <p><i class="fa-solid fa-code"></i> Built by <strong>Kolawole Abdullahi</strong> &nbsp;·&nbsp; <i class="fa-regular fa-copyright"></i> 2026</p>
+  </footer>
+ 
+  <script src="nav.js"></script>
+</body>
+</html>
