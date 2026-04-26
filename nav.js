@@ -1,16 +1,23 @@
+/* nav.js */
 function toggleNav() {
-  const burger = document.getElementById('burger');
-  const mobileNav = document.getElementById('mobileNav');
-  burger.classList.toggle('open');
-  mobileNav.classList.toggle('open');
+  document.getElementById('burger').classList.toggle('open');
+  document.getElementById('mobNav').classList.toggle('open');
 }
  
-// Close mobile nav when clicking outside
-document.addEventListener('click', function (e) {
+document.addEventListener('click', function(e) {
   const burger = document.getElementById('burger');
-  const mobileNav = document.getElementById('mobileNav');
-  if (!burger.contains(e.target) && !mobileNav.contains(e.target)) {
+  const nav = document.getElementById('mobNav');
+  if (!burger.contains(e.target) && !nav.contains(e.target)) {
     burger.classList.remove('open');
-    mobileNav.classList.remove('open');
+    nav.classList.remove('open');
   }
 });
+ 
+// Navbar scroll effect
+window.addEventListener('scroll', function() {
+  const navbar = document.getElementById('navbar');
+  if (navbar) {
+    navbar.classList.toggle('scrolled', window.scrollY > 40);
+  }
+});
+ 

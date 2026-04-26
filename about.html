@@ -1,210 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About — Kolawole Abdullahi</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;0,900;1,700&family=Satoshi:wght@300;400;500;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
  
-  <!-- NAV -->
-  <nav class="navbar">
+  <div class="page-loader" id="loader">
+    <div class="loader-ring"></div>
+    <p class="loader-text">Loading<span class="dots"></span></p>
+  </div>
+ 
+  <nav class="navbar" id="navbar">
     <a href="index.html" class="logo">
-      <div class="logo-mark">KA</div>
-      <div class="logo-text">Kolawole <span>Abdullahi</span></div>
+      <div class="logo-icon">KA</div>
+      <div class="logo-name">Kolawole <span>Abdullahi</span></div>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li><a href="about.html" class="active"><i class="fa-solid fa-user"></i> About</a></li>
-      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-      <li><a href="contact.html" class="nav-btn"><i class="fa-solid fa-id-card"></i> Hire Me</a></li>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="about.html" class="nav-link active"><i class="fa-solid fa-user"></i> About</a></li>
+      <li><a href="contact.html" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      <li><a href="contact.html" class="nav-cta"><i class="fa-solid fa-arrow-right"></i> Get In Touch</a></li>
     </ul>
-    <button class="burger" id="burger" onclick="toggleNav()" aria-label="Menu">
+    <button class="burger" id="burger" onclick="toggleNav()">
       <span></span><span></span><span></span>
     </button>
   </nav>
  
-  <!-- Mobile Menu -->
-  <div class="mobile-nav" id="mobileNav">
+  <div class="mob-nav" id="mobNav">
     <a href="index.html"><i class="fa-solid fa-house"></i> Home</a>
     <a href="about.html" class="active"><i class="fa-solid fa-user"></i> About</a>
     <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
-    <div class="mobile-divider"></div>
-    <a href="contact.html" class="mobile-btn"><i class="fa-solid fa-id-card"></i> Hire Me</a>
+    <div class="mob-sep"></div>
+    <a href="contact.html" class="mob-cta"><i class="fa-solid fa-arrow-right"></i> Get In Touch</a>
   </div>
  
   <!-- PAGE HERO -->
   <section class="page-hero">
-    <div class="container">
-      <p class="section-tag"><i class="fa-solid fa-user-graduate"></i> About Me</p>
-      <h1 class="page-hero-title">Student. Developer.<br><em>Problem Solver.</em></h1>
-      <p class="page-hero-sub">A second-year health information management science student with a love for clean code, bold design, and building tools that actually matter to people.</p>
+    <div class="page-hero-bg">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+    </div>
+    <div class="page-hero-inner main-container">
+      <div class="page-hero-text reveal-up">
+        <p class="section-label light-label"><i class="fa-solid fa-user-graduate"></i> About Me</p>
+        <h1>The student.<br>The <em>story.</em></h1>
+        <p>Get to know Abdullahi beyond the matric number. His background, what drives him, and where he is headed in the world of health information management.</p>
+      </div>
+      <div class="page-hero-photo reveal-right">
+        <!--
+          YOUR PHOTO: Save as "abdullahi-photo.jpg"
+        -->
+        <img src="./image copy 2.png" alt="Kolawole Abdullahi"
+          class="page-hero-img"
+          onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+        <div class="page-ph">
+          <i class="fa-solid fa-camera"></i>
+          <span>abdullahi-photo.jpg</span>
+        </div>
+      </div>
     </div>
   </section>
  
-  <!-- PROFILE SECTION -->
-  <section class="profile-section">
-    <div class="container profile-grid">
+  <!-- IDENTITY STRIP -->
+  <div class="identity-strip scroll-reveal">
+    <div class="main-container strip-inner">
+      <div class="strip-chip"><i class="fa-solid fa-id-badge"></i> Matric No: 25/1365</div>
+      <div class="strip-chip"><i class="fa-solid fa-building-columns"></i> Faculty of Health Sciences</div>
+      <div class="strip-chip"><i class="fa-solid fa-book-medical"></i> Health Information Management</div>
+      <div class="strip-chip"><i class="fa-solid fa-layer-group"></i> 200 Level</div>
+      <div class="strip-chip"><i class="fa-solid fa-calendar"></i> 2024/2025</div>
+      <div class="strip-chip highlight-chip"><i class="fa-solid fa-star"></i> GPA: 3.7 / 4.0</div>
+    </div>
+  </div>
  
-      <!-- Left: Identity Card -->
-      <div class="profile-left">
-        <div class="profile-card">
-          <div class="profile-avatar-wrap">
-            <div class="profile-avatar">KA</div>
-            <div class="status-dot"><i class="fa-solid fa-circle-check"></i> Active</div>
-          </div>
-          <h2 class="profile-name">Kolawole Abdullahi</h2>
-          <p class="profile-role"><i class="fa-solid fa-laptop-code"></i> Health Information Management Student</p>
+  <!-- ABOUT BODY -->
+  <section class="about-main">
+    <div class="main-container about-layout">
  
-          <div class="profile-details">
-            <div class="detail-row">
-              <span class="detail-label"><i class="fa-solid fa-id-badge"></i> Student ID</span>
-              <span class="detail-val">25/1365</span>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label"><i class="fa-solid fa-building-columns"></i> Faculty</span>
-              <span class="detail-val">Basic Medical Sciences</span>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label"><i class="fa-solid fa-book"></i> Department</span>
-              <span class="detail-val">HIM</span>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label"><i class="fa-solid fa-layer-group"></i> Level</span>
-              <span class="detail-val">200</span>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label"><i class="fa-solid fa-calendar"></i> Session</span>
-              <span class="detail-val">2025 / 2026</span>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label"><i class="fa-solid fa-location-dot"></i> State of Origin</span>
-              <span class="detail-val">Kwara, Nigeria</span>
-            </div>
-            <div class="detail-row">
-              <span class="detail-label"><i class="fa-solid fa-star"></i> CGPA</span>
-              <span class="detail-val cgpa">4.67 / 5.0</span>
-            </div>
-          </div>
+      <!-- LEFT COL -->
+      <div class="about-left">
  
-          <div class="profile-socials">
-            <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
-            <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#" title="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="mailto:amara@email.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-          </div>
-        </div>
-      </div>
- 
-      <!-- Right: Bio & Details -->
-      <div class="profile-right">
- 
-        <div class="bio-block">
+        <div class="abt-card scroll-reveal">
           <h3><i class="fa-solid fa-feather-pointed"></i> My Story</h3>
-          <p>I'm Kolawole, a 200-level Health Information Management student at Adeleke University. I grew up in Kwara State, Nigeria, with a deep curiosity about how healthcare systems work and how information shapes patient outcomes. What started as an interest in health sciences evolved into a passion for managing, protecting, and leveraging medical data to improve lives.</p>
-<p>I specialize in health records management and clinical data systems, with a growing interest in health informatics and data analytics. I believe well-managed health information is like a well-told story — it should be accurate, accessible, and meaningful to those who need it most.</p>
-        </div>
- 
-        <!-- Skills with progress -->
-        <div class="skills-block">
-          <h3><i class="fa-solid fa-chart-bar"></i> Technical Skills</h3>
-          <div class="skill-bar-list">
-            <div class="skill-bar-item">
-              <div class="skill-bar-top">
-                <span><i class="fa-brands fa-html5"></i> HTML / CSS</span>
-                <span>92%</span>
-              </div>
-              <div class="bar-track"><div class="bar-fill" style="width:92%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-top">
-                <span><i class="fa-brands fa-js"></i> JavaScript</span>
-                <span>85%</span>
-              </div>
-              <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-top">
-                <span><i class="fa-brands fa-python"></i> Python</span>
-                <span>78%</span>
-              </div>
-              <div class="bar-track"><div class="bar-fill" style="width:78%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-top">
-                <span><i class="fa-brands fa-react"></i> React</span>
-                <span>72%</span>
-              </div>
-              <div class="bar-track"><div class="bar-fill" style="width:72%"></div></div>
-            </div>
-            <div class="skill-bar-item">
-              <div class="skill-bar-top">
-                <span><i class="fa-solid fa-database"></i> SQL / Databases</span>
-                <span>68%</span>
-              </div>
-              <div class="bar-track"><div class="bar-fill" style="width:68%"></div></div>
-            </div>
-          </div>
+          <p>I am Kolawole Abdullahi, a 200 level Health Information Management student and someone who takes the work of managing health data very personally. I grew up watching people in my community struggle with a healthcare system that seemed to lose track of them every time they visited a new hospital. A missing file here, a repeated test there, a wrong diagnosis because a doctor did not have the full picture.</p>
+          <p>Those experiences planted a question in my mind that never went away: why is it so hard to keep track of something as important as a person's health history? That question led me to Health Information Management and I have not looked back since.</p>
+          <p>My goal is straightforward. I want to help build health systems where data flows correctly, records are protected properly and every decision is backed by accurate information. I may only be in my second year but I am approaching this with the seriousness it deserves.</p>
         </div>
  
         <!-- Education -->
-        <div class="edu-block">
+        <div class="abt-card scroll-reveal">
           <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
-          <div class="timeline">
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div class="tl-body">
-                <span class="tl-year"><i class="fa-regular fa-clock"></i> 2025  Present</span>
+          <div class="edu-tl">
+            <div class="edu-entry">
+              <div class="edu-dot"></div>
+              <div class="edu-details">
+                <span class="edu-yr"><i class="fa-regular fa-clock"></i> 2023 to Present</span>
                 <h4>B.Sc. Health Information Management</h4>
-                <p>Adeleke University Portal &nbsp;·&nbsp; CGPA: 4.67 / 5.0</p>
+                <p>Faculty of Health Sciences · Matric No. 25/1365</p>
+                <div class="edu-tag"><i class="fa-solid fa-star"></i> GPA: 3.7 / 4.0 · 200 Level</div>
               </div>
             </div>
-            <div class="tl-item">
-              <div class="tl-dot"></div>
-              <div class="tl-body">
-                <span class="tl-year"><i class="fa-regular fa-clock"></i> 2014 – 2020</span>
+            <div class="edu-entry">
+              <div class="edu-dot"></div>
+              <div class="edu-details">
+                <span class="edu-yr"><i class="fa-regular fa-clock"></i> 2020 to 2023</span>
                 <h4>WAEC / SSCE</h4>
-                <p>Government Secondary School, Lagos &nbsp;·&nbsp; 8 A's</p>
+                <p>Federal Government College, Ilorin</p>
+                <div class="edu-tag"><i class="fa-solid fa-check"></i> 7 A's · 1 B</div>
               </div>
             </div>
           </div>
         </div>
  
         <!-- Achievements -->
-        <div class="achieve-block">
-          <h3><i class="fa-solid fa-trophy"></i> Awards & Achievements</h3>
-          <div class="achieve-grid">
+        <div class="abt-card scroll-reveal">
+          <h3><i class="fa-solid fa-trophy"></i> Awards and Achievements</h3>
+          <div class="achieve-list">
             <div class="achieve-item">
-              <i class="fa-solid fa-medal"></i>
+              <div class="ach-num">01</div>
               <div>
-                <h4>Best Final Year Project 2023</h4>
-                <p>Faculty of Sciences Award</p>
+                <h4>Best 100 Level Student</h4>
+                <p>Faculty of Health Sciences · Session 2023/2024</p>
               </div>
             </div>
             <div class="achieve-item">
-              <i class="fa-solid fa-award"></i>
+              <div class="ach-num">02</div>
               <div>
-                <h4>Dean's List  3 Consecutive Semesters</h4>
+                <h4>Dean's List · Two Semesters Running</h4>
                 <p>Academic Excellence Recognition</p>
               </div>
             </div>
             <div class="achieve-item">
-              <i class="fa-solid fa-code-branch"></i>
+              <div class="ach-num">03</div>
               <div>
-                <h4>1st Place — University Hackathon</h4>
-                <p>Built an offline student management tool</p>
+                <h4>WHO Open Health Data Certificate</h4>
+                <p>World Health Organization · Online · 2024</p>
               </div>
             </div>
             <div class="achieve-item">
-              <i class="fa-solid fa-certificate"></i>
+              <div class="ach-num">04</div>
               <div>
-                <h4>Google Africa Scholarship 2024</h4>
-                <p>Mobile Web Specialist Track</p>
+                <h4>NCDC Volunteer · Disease Surveillance Unit</h4>
+                <p>Data Entry and Epidemiology Support · 2024</p>
               </div>
             </div>
+          </div>
+        </div>
+ 
+      </div>
+ 
+      <!-- RIGHT COL -->
+      <div class="about-right">
+ 
+        <!-- Skills -->
+        <div class="abt-card scroll-reveal">
+          <h3><i class="fa-solid fa-chart-bar"></i> Technical Skills</h3>
+          <div class="skills-list">
+            <div class="sk">
+              <div class="sk-top"><span><i class="fa-solid fa-file-medical-alt"></i> Medical Records Management</span><span>88%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-width="88"></div></div>
+            </div>
+            <div class="sk">
+              <div class="sk-top"><span><i class="fa-solid fa-code-branch"></i> ICD-11 Medical Coding</span><span>80%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-width="80"></div></div>
+            </div>
+            <div class="sk">
+              <div class="sk-top"><span><i class="fa-solid fa-laptop-medical"></i> EHR Systems & Informatics</span><span>75%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-width="75"></div></div>
+            </div>
+            <div class="sk">
+              <div class="sk-top"><span><i class="fa-solid fa-chart-pie"></i> Biostatistics & Research</span><span>72%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-width="72"></div></div>
+            </div>
+            <div class="sk">
+              <div class="sk-top"><span><i class="fa-solid fa-shield-halved"></i> Patient Privacy & NDPR</span><span>70%</span></div>
+              <div class="sk-track"><div class="sk-fill" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Courses -->
+        <div class="abt-card scroll-reveal">
+          <h3><i class="fa-solid fa-book-open-reader"></i> Courses I Am Currently Taking</h3>
+          <div class="courses-grid">
+            <div class="course-chip"><i class="fa-solid fa-hospital"></i> Hospital Administration</div>
+            <div class="course-chip"><i class="fa-solid fa-stethoscope"></i> Anatomy & Physiology</div>
+            <div class="course-chip"><i class="fa-solid fa-file-waveform"></i> Medical Terminology</div>
+            <div class="course-chip"><i class="fa-solid fa-chart-simple"></i> Biostatistics I</div>
+            <div class="course-chip"><i class="fa-solid fa-laptop-medical"></i> Health Informatics I</div>
+            <div class="course-chip"><i class="fa-solid fa-scale-balanced"></i> Health Law & Ethics</div>
+            <div class="course-chip"><i class="fa-solid fa-code-branch"></i> Disease Classification</div>
+            <div class="course-chip"><i class="fa-solid fa-people-group"></i> Community Health</div>
+          </div>
+        </div>
+ 
+        <!-- Languages -->
+        <div class="abt-card scroll-reveal">
+          <h3><i class="fa-solid fa-language"></i> Languages</h3>
+          <div class="lang-list">
+            <div class="lang-row">
+              <span><i class="fa-solid fa-circle-check"></i> English</span>
+              <span class="lang-tag fluent">Fluent</span>
+            </div>
+            <div class="lang-row">
+              <span><i class="fa-solid fa-circle-check"></i> Yoruba</span>
+              <span class="lang-tag native">Native</span>
+            </div>
+            <div class="lang-row">
+              <span><i class="fa-solid fa-circle-check"></i> Hausa</span>
+              <span class="lang-tag basic">Basic</span>
+            </div>
+          </div>
+        </div>
+ 
+        <!-- Interests -->
+        <div class="abt-card scroll-reveal">
+          <h3><i class="fa-solid fa-heart"></i> Interests</h3>
+          <div class="interest-wrap">
+            <span class="int-chip"><i class="fa-solid fa-laptop-medical"></i> Digital Health</span>
+            <span class="int-chip"><i class="fa-solid fa-earth-africa"></i> Global Health Policy</span>
+            <span class="int-chip"><i class="fa-solid fa-pen-nib"></i> Academic Writing</span>
+            <span class="int-chip"><i class="fa-solid fa-brain"></i> AI in Healthcare</span>
+            <span class="int-chip"><i class="fa-solid fa-book-open"></i> Reading</span>
+            <span class="int-chip"><i class="fa-solid fa-futbol"></i> Football</span>
+            <span class="int-chip"><i class="fa-solid fa-chess"></i> Chess</span>
+            <span class="int-chip"><i class="fa-solid fa-mosque"></i> Islamic Studies</span>
           </div>
         </div>
  
@@ -212,27 +237,17 @@
     </div>
   </section>
  
-  <!-- INTERESTS -->
-  <section class="interests-section">
-    <div class="container">
-      <h3><i class="fa-solid fa-heart"></i> Interests & Hobbies</h3>
-      <div class="interests-grid">
-        <div class="interest-chip"><i class="fa-solid fa-microchip"></i> Open Source</div>
-        <div class="interest-chip"><i class="fa-solid fa-brain"></i> Machine Learning</div>
-        <div class="interest-chip"><i class="fa-solid fa-palette"></i> UI/UX Design</div>
-        <div class="interest-chip"><i class="fa-solid fa-book-open"></i> Technical Writing</div>
-        <div class="interest-chip"><i class="fa-solid fa-chess"></i> Chess</div>
-        <div class="interest-chip"><i class="fa-solid fa-camera"></i> Photography</div>
-        <div class="interest-chip"><i class="fa-solid fa-music"></i> Afrobeats</div>
-        <div class="interest-chip"><i class="fa-solid fa-globe"></i> Travel</div>
-      </div>
-    </div>
-  </section>
- 
   <footer class="footer">
-    <p><i class="fa-solid fa-code"></i> Built by <strong>Kolawole Abdullahi</strong> &nbsp;·&nbsp; <i class="fa-regular fa-copyright"></i> 2026</p>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="logo-icon sm">KA</div>
+        <span>Kolawole Abdullahi</span>
+      </div>
+      <p><i class="fa-regular fa-copyright"></i> 2025 · Health Information Management Student · Matric No. 25/1365</p>
+    </div>
   </footer>
  
   <script src="nav.js"></script>
+  <script src="animations.js"></script>
 </body>
 </html>

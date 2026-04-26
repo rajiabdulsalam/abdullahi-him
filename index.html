@@ -1,194 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kolawole Abdullahi - Student Portfolio</title>
+  <title>Kolawole Abdullahi — Health Information Management</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,700;0,900;1,700&family=Satoshi:wght@300;400;500;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
  
-  <!-- NAV -->
-  <nav class="navbar">
+  <!-- LOADER -->
+  <div class="page-loader" id="loader">
+    <div class="loader-ring"></div>
+    <p class="loader-text">Loading<span class="dots"></span></p>
+  </div>
+ 
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
     <a href="index.html" class="logo">
-      <div class="logo-mark">KA</div>
-      <div class="logo-text">Kolawole  <span>Abdullahi</span></div>
+      <div class="logo-icon">KA</div>
+      <div class="logo-name">Kolawole <span>Abdullahi</span></div>
     </a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
-      <li><a href="about.html"><i class="fa-solid fa-user"></i> About</a></li>
-      <li><a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a></li>
-      <li><a href="contact.html" class="nav-btn"><i class="fa-solid fa-id-card"></i> Hire Me</a></li>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="about.html" class="nav-link"><i class="fa-solid fa-user"></i> About</a></li>
+      <li><a href="contact.html" class="nav-link"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+      <li><a href="contact.html" class="nav-cta"><i class="fa-solid fa-arrow-right"></i> Get In Touch</a></li>
     </ul>
-    <button class="burger" id="burger" onclick="toggleNav()" aria-label="Menu">
+    <button class="burger" id="burger" onclick="toggleNav()">
       <span></span><span></span><span></span>
     </button>
   </nav>
  
-  <!-- Mobile Menu -->
-  <div class="mobile-nav" id="mobileNav">
+  <div class="mob-nav" id="mobNav">
     <a href="index.html" class="active"><i class="fa-solid fa-house"></i> Home</a>
     <a href="about.html"><i class="fa-solid fa-user"></i> About</a>
     <a href="contact.html"><i class="fa-solid fa-envelope"></i> Contact</a>
-    <div class="mobile-divider"></div>
-    <a href="contact.html" class="mobile-btn"><i class="fa-solid fa-id-card"></i> Hire Me</a>
+    <div class="mob-sep"></div>
+    <a href="contact.html" class="mob-cta"><i class="fa-solid fa-arrow-right"></i> Get In Touch</a>
   </div>
  
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-bg-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
+    <div class="hero-bg">
+      <div class="orb orb1"></div>
+      <div class="orb orb2"></div>
+      <div class="orb orb3"></div>
+      <div class="hero-grid-overlay"></div>
     </div>
-    <div class="hero-inner">
-      <div class="hero-content">
-        <p class="hero-tag"><i class="fa-solid fa-graduation-cap"></i> HIM · Level 200</p>
-        <h1>Hello, I'm <br><em>Kolawole Abdullahi</em></h1>
-        <p class="hero-sub">A dedicated health information management student passionate about bridging healthcare and technology to improve how medical data is organized, accessed, and protected. Currently open to internships and collaborative projects.</p>
-        <div class="hero-actions">
-          <a href="about.html" class="btn-primary"><i class="fa-solid fa-user-circle"></i> View My Profile</a>
-          <a href="contact.html" class="btn-ghost"><i class="fa-solid fa-paper-plane"></i> Get In Touch</a>
+ 
+    <div class="hero-container">
+      <div class="hero-content reveal-left">
+        <div class="hero-badge">
+          <i class="fa-solid fa-stethoscope"></i>
+          Health Information Management · 200 Level
         </div>
-        <div class="hero-socials">
-          <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
-      </div>
-      <div class="hero-photo-wrap">
-        <div class="hero-photo-frame">
-          <!-- 
-            ===== YOUR PROFILE PHOTO =====
-            Replace "your-photo.jpg" with your actual image filename.
-            Keep the image in the same folder as index.html.
-            Recommended size: 400x500px or larger, portrait orientation.
-          -->
-          <img
-            src="./image.png"
-            alt="Amara Okonkwo"
-            class="hero-photo"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          />
-          <!-- Placeholder shown when no photo is uploaded yet -->
-          <div class="hero-photo-placeholder">
-            <i class="fa-solid fa-camera"></i>
-            <span>Add your photo here</span>
-            <small>Replace <code>your-photo.jpg</code></small>
+        <h1 class="hero-heading">
+          I'm <em>Kolawole</em><br>Abdullahi.
+        </h1>
+        <p class="hero-tagline">
+          A 200 level Health Information Management student who believes that the way we manage health data is just as important as the care that data supports. I am building the skills to make health systems smarter, safer and more human.
+        </p>
+ 
+        <div class="id-ribbon reveal-up" style="animation-delay:0.4s">
+          <div class="id-cell">
+            <i class="fa-solid fa-id-badge"></i>
+            <div>
+              <small>Matric Number</small>
+              <strong>25/1365</strong>
+            </div>
           </div>
-          <div class="photo-badge">
-            <i class="fa-solid fa-circle-check"></i> Active Student
+          <div class="id-divider"></div>
+          <div class="id-cell">
+            <i class="fa-solid fa-building-columns"></i>
+            <div>
+              <small>Faculty</small>
+              <strong>Health Sciences</strong>
+            </div>
+          </div>
+          <div class="id-divider"></div>
+          <div class="id-cell">
+            <i class="fa-solid fa-layer-group"></i>
+            <div>
+              <small>Level</small>
+              <strong>200</strong>
+            </div>
           </div>
         </div>
  
-        <!-- Student ID mini card below photo -->
-        <div class="hero-id-mini">
-          <div class="id-mini-left">
-            <span class="id-mini-label"><i class="fa-solid fa-id-badge"></i> Student ID</span>
-            <strong>25/1365</strong>
+        <div class="hero-actions reveal-up" style="animation-delay:0.6s">
+          <a href="about.html" class="btn-primary">
+            <i class="fa-solid fa-user-circle"></i> View My Profile
+          </a>
+          <a href="contact.html" class="btn-ghost">
+            <i class="fa-solid fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+ 
+        <div class="hero-socials reveal-up" style="animation-delay:0.8s">
+          <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" title="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" title="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
+        </div>
+      </div>
+ 
+      <div class="hero-photo-col reveal-right">
+        <div class="photo-frame">
+          <div class="photo-frame-glow"></div>
+          <!--
+            YOUR PHOTO HERE
+            Save as "abdullahi-photo.jpg" in this folder.
+            Best: 400x500px portrait.
+          -->
+          <img
+            src="./image.png"
+            alt="Kolawole Abdullahi"
+            class="hero-img"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"
+          />
+          <div class="photo-placeholder">
+            <i class="fa-solid fa-camera"></i>
+            <span>Your Photo Here</span>
+            <code>abdullahi-photo.jpg</code>
           </div>
-          <div class="id-mini-right">
-            <span class="id-mini-label"><i class="fa-solid fa-building-columns"></i> Faculty</span>
-            <strong>Sciences</strong>
+          <div class="photo-badge-top">
+            <i class="fa-solid fa-circle-check"></i> Active Student
           </div>
-          <div class="id-mini-right">
-            <span class="id-mini-label"><i class="fa-solid fa-layer-group"></i> Level</span>
-            <strong>200</strong>
+          <div class="photo-badge-bot">
+            <span class="gpa-num">3.7</span>
+            <span class="gpa-label">GPA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="scroll-hint">
+      <span>Scroll to explore</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+  </section>
+ 
+  <!-- TICKER -->
+  <div class="ticker">
+    <div class="ticker-inner">
+      <span><i class="fa-solid fa-circle"></i> Medical Records</span>
+      <span><i class="fa-solid fa-circle"></i> ICD-11 Coding</span>
+      <span><i class="fa-solid fa-circle"></i> Health Informatics</span>
+      <span><i class="fa-solid fa-circle"></i> Biostatistics</span>
+      <span><i class="fa-solid fa-circle"></i> Patient Privacy</span>
+      <span><i class="fa-solid fa-circle"></i> Community Health</span>
+      <span><i class="fa-solid fa-circle"></i> EHR Systems</span>
+      <span><i class="fa-solid fa-circle"></i> Clinical Research</span>
+      <span><i class="fa-solid fa-circle"></i> Medical Records</span>
+      <span><i class="fa-solid fa-circle"></i> ICD-11 Coding</span>
+      <span><i class="fa-solid fa-circle"></i> Health Informatics</span>
+      <span><i class="fa-solid fa-circle"></i> Biostatistics</span>
+      <span><i class="fa-solid fa-circle"></i> Patient Privacy</span>
+      <span><i class="fa-solid fa-circle"></i> Community Health</span>
+      <span><i class="fa-solid fa-circle"></i> EHR Systems</span>
+      <span><i class="fa-solid fa-circle"></i> Clinical Research</span>
+    </div>
+  </div>
+ 
+  <!-- STATS -->
+  <section class="stats-section">
+    <div class="main-container">
+      <div class="stats-row">
+        <div class="stat-box scroll-reveal">
+          <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+          <div class="stat-num" data-count="37" data-decimal="true">0</div>
+          <p>Current GPA</p>
+        </div>
+        <div class="stat-box scroll-reveal" style="transition-delay:0.1s">
+          <div class="stat-icon"><i class="fa-solid fa-certificate"></i></div>
+          <div class="stat-num" data-count="4">0</div>
+          <p>Certifications</p>
+        </div>
+        <div class="stat-box scroll-reveal" style="transition-delay:0.2s">
+          <div class="stat-icon"><i class="fa-solid fa-hospital-user"></i></div>
+          <div class="stat-num" data-count="2">0</div>
+          <p>Clinical Attachments</p>
+        </div>
+        <div class="stat-box scroll-reveal" style="transition-delay:0.3s">
+          <div class="stat-icon"><i class="fa-solid fa-hands-helping"></i></div>
+          <div class="stat-num" data-count="6">0</div>
+          <p>Volunteer Months</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ABOUT TEASER -->
+  <section class="teaser-section">
+    <div class="main-container teaser-grid">
+      <div class="teaser-left scroll-reveal">
+        <p class="section-label"><i class="fa-solid fa-user-graduate"></i> A Little About Me</p>
+        <h2>More than just a<br><em>student with books.</em></h2>
+        <p>My name is Kolawole Abdullahi and I did not stumble into Health Information Management by accident. I chose this path because I saw how hospitals around me were drowning in paper, losing patient files, and making decisions based on incomplete data. That bothered me more than I can explain.</p>
+        <p>I want to be part of the generation that fixes that. Whether it is implementing better EHR systems, training staff on data governance or contributing to national health data policy, I am preparing myself for all of it.</p>
+        <a href="about.html" class="read-more-link">
+          <span>Read my full story</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+      <div class="teaser-right scroll-reveal" style="transition-delay:0.15s">
+        <div class="focus-cards">
+          <div class="focus-card">
+            <div class="fc-icon"><i class="fa-solid fa-database"></i></div>
+            <h4>Health Data Systems</h4>
+            <p>Learning how health records are structured, stored and used to drive better clinical decisions.</p>
+          </div>
+          <div class="focus-card">
+            <div class="fc-icon"><i class="fa-solid fa-code-branch"></i></div>
+            <h4>Medical Coding</h4>
+            <p>Developing accuracy in ICD-11 classification across multiple clinical specialties and case types.</p>
+          </div>
+          <div class="focus-card">
+            <div class="fc-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <h4>Patient Data Privacy</h4>
+            <p>Understanding the legal and ethical frameworks that protect patient information in Nigeria and globally.</p>
+          </div>
+          <div class="focus-card">
+            <div class="fc-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <h4>Health Statistics</h4>
+            <p>Using numbers and patterns in health data to support research and public health planning.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
  
-  <!-- SKILLS SNAPSHOT -->
+  <!-- SKILLS -->
   <section class="skills-section">
-    <div class="container">
-      <p class="section-tag"><i class="fa-solid fa-code"></i> Skills & Tools</p>
-      <h2 class="section-title">What I Work With</h2>
+    <div class="main-container">
+      <p class="section-label scroll-reveal"><i class="fa-solid fa-layer-group"></i> Skills</p>
+      <h2 class="section-h2 scroll-reveal">What I Bring to the Table</h2>
       <div class="skills-grid">
-        <div class="skill-chip"><i class="fa-brands fa-html5"></i> HTML5</div>
-        <div class="skill-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</div>
-        <div class="skill-chip"><i class="fa-brands fa-js"></i> JavaScript</div>
-        <div class="skill-chip"><i class="fa-brands fa-python"></i> Python</div>
-        <div class="skill-chip"><i class="fa-brands fa-react"></i> React</div>
-        <div class="skill-chip"><i class="fa-brands fa-node-js"></i> Node.js</div>
-        <div class="skill-chip"><i class="fa-solid fa-database"></i> MySQL</div>
-        <div class="skill-chip"><i class="fa-brands fa-git-alt"></i> Git</div>
+        <div class="skill-item scroll-reveal">
+          <div class="skill-top">
+            <span><i class="fa-solid fa-file-medical"></i> Medical Records Management</span>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="skill-track"><div class="skill-bar" data-width="88"></div></div>
+        </div>
+        <div class="skill-item scroll-reveal" style="transition-delay:0.08s">
+          <div class="skill-top">
+            <span><i class="fa-solid fa-code-branch"></i> ICD-11 Medical Coding</span>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="skill-track"><div class="skill-bar" data-width="80"></div></div>
+        </div>
+        <div class="skill-item scroll-reveal" style="transition-delay:0.16s">
+          <div class="skill-top">
+            <span><i class="fa-solid fa-laptop-medical"></i> Health Informatics & EHR</span>
+            <span class="skill-pct">75%</span>
+          </div>
+          <div class="skill-track"><div class="skill-bar" data-width="75"></div></div>
+        </div>
+        <div class="skill-item scroll-reveal" style="transition-delay:0.24s">
+          <div class="skill-top">
+            <span><i class="fa-solid fa-chart-simple"></i> Biostatistics & Research</span>
+            <span class="skill-pct">72%</span>
+          </div>
+          <div class="skill-track"><div class="skill-bar" data-width="72"></div></div>
+        </div>
+        <div class="skill-item scroll-reveal" style="transition-delay:0.32s">
+          <div class="skill-top">
+            <span><i class="fa-solid fa-shield-halved"></i> Data Privacy & Ethics</span>
+            <span class="skill-pct">70%</span>
+          </div>
+          <div class="skill-track"><div class="skill-bar" data-width="70"></div></div>
+        </div>
+        <div class="skill-item scroll-reveal" style="transition-delay:0.4s">
+          <div class="skill-top">
+            <span><i class="fa-solid fa-people-group"></i> Community Health</span>
+            <span class="skill-pct">68%</span>
+          </div>
+          <div class="skill-track"><div class="skill-bar" data-width="68"></div></div>
+        </div>
       </div>
     </div>
   </section>
  
   <!-- PROJECTS -->
   <section class="projects-section">
-    <div class="container">
-      <p class="section-tag"><i class="fa-solid fa-folder-open"></i> Portfolio</p>
-      <h2 class="section-title">Featured Projects</h2>
+    <div class="main-container">
+      <p class="section-label scroll-reveal"><i class="fa-solid fa-folder-open"></i> Projects</p>
+      <h2 class="section-h2 scroll-reveal">Work I Am Proud Of</h2>
       <div class="projects-grid">
  
-        <div class="project-card">
-          <!-- 
-            PROJECT SCREENSHOT: Replace "project1.jpg" with your screenshot.
-            Recommended size: 600x360px (16:9 ratio)
+        <div class="proj-card scroll-reveal">
+          <!--
+            PROJECT SCREENSHOT: Save as "project1.jpg"
+            Recommended: 600x380px
           -->
-          <div class="project-thumb">
-            <img src="project1.jpg" alt="Campus Marketplace screenshot"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <div class="project-thumb-placeholder">
-              <i class="fa-solid fa-image"></i>
-              <span>project1.jpg</span>
-            </div>
-            <div class="project-thumb-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+          <div class="proj-thumb">
+            <img src="./image copy.png" alt="Health Records Study"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+            <div class="proj-thumb-ph"><i class="fa-solid fa-image"></i><span>project1.jpg</span></div>
+            <div class="proj-cat"><i class="fa-solid fa-file-medical-alt"></i></div>
           </div>
-          <div class="project-body">
-            <h3>Campus Marketplace</h3>
-            <p>A peer-to-peer marketplace for students to buy and sell goods within the campus community.</p>
-            <div class="project-tags">
-              <span>React</span><span>Node.js</span><span>MongoDB</span>
-            </div>
-            <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+          <div class="proj-content">
+            <div class="proj-tags"><span>EHR</span><span>Research</span><span>Analysis</span></div>
+            <h3>Health Records Digitisation Study</h3>
+            <p>I looked into how a local general hospital was managing patient records and identified the gaps that were slowing down care delivery. The report included practical recommendations for EHR adoption.</p>
+            <a href="#" class="proj-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Report</a>
           </div>
         </div>
  
-        <div class="project-card">
-          <!-- Replace "project2.jpg" with your screenshot -->
-          <div class="project-thumb">
-            <img src="project2.jpg" alt="Smart Timetable screenshot"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <div class="project-thumb-placeholder">
-              <i class="fa-solid fa-image"></i>
-              <span>project2.jpg</span>
-            </div>
-            <div class="project-thumb-icon"><i class="fa-solid fa-calendar-check"></i></div>
+        <div class="proj-card scroll-reveal" style="transition-delay:0.12s">
+          <div class="proj-thumb">
+            <img src="./images (1).jpg" alt="ICD-11 Coding Portfolio"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+            <div class="proj-thumb-ph"><i class="fa-solid fa-image"></i><span>project2.jpg</span></div>
+            <div class="proj-cat"><i class="fa-solid fa-code-branch"></i></div>
           </div>
-          <div class="project-body">
-            <h3>Smart Timetable</h3>
-            <p>An automated timetable generator for university departments — reduces scheduling conflicts by 90%.</p>
-            <div class="project-tags">
-              <span>Python</span><span>Django</span><span>PostgreSQL</span>
-            </div>
-            <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+          <div class="proj-content">
+            <div class="proj-tags"><span>ICD-11</span><span>Clinical</span></div>
+            <h3>ICD-11 Case Coding Portfolio</h3>
+            <p>A collection of over 50 coded clinical case studies across medicine, obstetrics and surgery. Each case was coded independently and reviewed by a faculty supervisor.</p>
+            <a href="#" class="proj-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Portfolio</a>
           </div>
         </div>
  
-        <div class="project-card">
-          <!-- Replace "project3.jpg" with your screenshot -->
-          <div class="project-thumb">
-            <img src="project3.jpg" alt="StudySync screenshot"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <div class="project-thumb-placeholder">
-              <i class="fa-solid fa-image"></i>
-              <span>project3.jpg</span>
-            </div>
-            <div class="project-thumb-icon"><i class="fa-solid fa-book-open"></i></div>
+        <div class="proj-card scroll-reveal" style="transition-delay:0.24s">
+          <div class="proj-thumb">
+            <img src="./images (2).jpg" alt="Community Health Survey"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex';"/>
+            <div class="proj-thumb-ph"><i class="fa-solid fa-image"></i><span>project3.jpg</span></div>
+            <div class="proj-cat"><i class="fa-solid fa-heart-pulse"></i></div>
           </div>
-          <div class="project-body">
-            <h3>StudySync</h3>
-            <p>A collaborative study platform with real-time notes, flashcards, and group study rooms.</p>
-            <div class="project-tags">
-              <span>JavaScript</span><span>Firebase</span><span>CSS</span>
-            </div>
-            <a href="#" class="project-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> View Project</a>
+          <div class="proj-content">
+            <div class="proj-tags"><span>Public Health</span><span>Survey</span></div>
+            <h3>Community Health Access Report</h3>
+            <p>Conducted a structured survey across 120 households to assess how people access healthcare services. The findings were summarised in a statistical report submitted to the faculty.</p>
+            <a href="#" class="proj-link"><i class="fa-solid fa-arrow-up-right-from-square"></i> Read Report</a>
           </div>
         </div>
  
@@ -196,21 +343,31 @@
     </div>
   </section>
  
-  <!-- CTA BANNER -->
-  <section class="cta-banner">
-    <div class="container cta-inner">
-      <div>
-        <h2><i class="fa-solid fa-handshake"></i> Open to Opportunities</h2>
-        <p>Internships, freelance projects, or collaborative builds — let's create something great.</p>
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-inner scroll-reveal">
+      <div class="cta-text">
+        <p class="section-label light-label"><i class="fa-solid fa-handshake-simple"></i> Open to Opportunities</p>
+        <h2>Internships. Research.<br>Clinical Attachments.</h2>
+        <p>If you are looking for a motivated HIM student who takes data seriously and shows up fully prepared, Abdullahi would love to hear from you.</p>
       </div>
-      <a href="contact.html" class="btn-primary"><i class="fa-solid fa-paper-plane"></i> Let's Talk</a>
+      <a href="contact.html" class="btn-gold-lg">
+        <i class="fa-solid fa-paper-plane"></i> Start a Conversation
+      </a>
     </div>
   </section>
  
   <footer class="footer">
-    <p><i class="fa-solid fa-code"></i> Built by <strong>Kolawole Abdullahi</strong> &nbsp;·&nbsp; <i class="fa-regular fa-copyright"></i> 2026</p>
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="logo-icon sm">KA</div>
+        <span>Kolawole Abdullahi</span>
+      </div>
+      <p><i class="fa-regular fa-copyright"></i> 2025 · Health Information Management Student · Matric No. 25/1365</p>
+    </div>
   </footer>
  
   <script src="nav.js"></script>
+  <script src="animations.js"></script>
 </body>
 </html>
